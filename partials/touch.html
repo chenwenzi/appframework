@@ -2,19 +2,31 @@
 <script>
 $(document).ready(function(){
     $("#taptest").bind("tap",function(){
-        alert("I was tapped");
+        console.log("I was tapped");
     })
     $("#singletaptest").bind("singleTap",function(){
-        alert("I was single tapped");
+        console.log("I was single tapped");
     })
     $("#longtaptest").bind("longTap",function(){
-        alert("I was a long tap");
+        console.log("I was a long tap");
     })
     $("#doubletaptest").bind("doubleTap",function(){
-        alert("I was a double tap");
+        console.log("I was a double tap");
     })
     $("#swipetest").bind("swipe",function(){
-        alert("I was a swiped");
+        console.log("I was a swiped");
+    });
+    $("#swipeu").bind("swipeUp",function(){
+        console.log("I was a swipeUp");
+    });
+    $("#swipel").bind("swipeLeft",function(){
+        console.log("I was a swipeLeft");
+    });
+    $("#swiper").bind("swipeRight",function(){
+        console.log("I was a swipeRight");
+    });
+    $("#swiped").bind("swipeDown",function(){
+        console.log("I was a swipeDown");
     });
 
 });
@@ -34,7 +46,13 @@ function showMoreSheet(){
         <li><a id='longtaptest' >Long Tap Test</a></li>
         <li><a id='singletaptest' >Single Tap Test</a></li>
         <li><a id='doubletaptest' >Double Tap Test</a></li>
-        <li class="swipe-x swipe-y"><a id='swipetest' >Swipe Test</a></li>
+
+        <li class="swipe-x swipe-y"><a id='swipeu' >Swipe Up Test</a></li>
+		<li class="swipe-x swipe-y"><a id='swipel' >Swipe Left Test</a></li>
+		<li class="swipe-x swipe-y"><a id='swiper' >Swipe Right Test</a></li>
+		<li class="swipe-x swipe-y"><a id='swiped' >Swipe Down Test</a></li>
+		<li class="swipe-x swipe-y"><a id='swipetest' >Swipe Test</a></li>
+
         <li class="swipe-reveal">
             <div class="swipe-content">Swipe to reveal options </div>
             <div class="swipe-hidden">
