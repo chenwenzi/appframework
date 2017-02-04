@@ -13,10 +13,11 @@ $(document).ready(function(){
     $("#doubletaptest").bind("doubleTap",function(){
         console.log("I was a double tap");
     })
-    $("#swipetest").bind("swipe",function(){
+    $("#swipetest").bind("swipe",function(e){
         console.log("I was a swiped");
     });
-    $("#swipeu").bind("swipeUp",function(){
+    $("#swipeu").bind("swipeUp",function(e){
+		//e.preventDefault();
         console.log("I was a swipeUp");
     });
     $("#swipel").bind("swipeLeft",function(){
@@ -25,7 +26,7 @@ $(document).ready(function(){
     $("#swiper").bind("swipeRight",function(){
         console.log("I was a swipeRight");
     });
-    $("#swiped").bind("swipeDown",function(){
+    $("#swiped").bind("swipeDown",function(e){
         console.log("I was a swipeDown");
     });
 
@@ -37,21 +38,24 @@ function showMoreSheet(){
             cssClasses: ''
         }]);
 }
+
 </script>
     <h2>Touch Events</h2>
      <a class='button' href='#main' data-transition='up-reveal:dismiss'>Back</a>
 
     <ul class="list">
-        <li><a id='taptest' >Tap <br>Test</a></li>
-        <li><a id='longtaptest' >Long Tap Test</a></li>
-        <li><a id='singletaptest' >Single Tap Test</a></li>
-        <li><a id='doubletaptest' >Double Tap Test</a></li>
+        <li><a id='taptest' >Tap Test</a></li> <br>
+        <li><a id='longtaptest' >Long Tap Test</a></li> <br>
+        <li><a id='singletaptest' >Single Tap Test</a></li> <br>
+        <li><a id='doubletaptest' >Double Tap Test</a></li> <br>
 
-        <li class="swipe-x swipe-y"><a id='swipeu' >Swipe Up Test</a></li>
-		<li class="swipe-x swipe-y"><a id='swipel' >Swipe Left Test</a></li>
-		<li class="swipe-x swipe-y"><a id='swiper' >Swipe Right Test</a></li>
-		<li class="swipe-x swipe-y"><a id='swiped' >Swipe Down Test</a></li>
-		<li class="swipe-x swipe-y"><a id='swipetest' >Swipe Test</a></li>
+
+
+        <li class="swipe-x swipe-y"><a id='swipeu' >Swipe Up Test</a></li> <br>
+		<li class="swipe-x swipe-y"><a id='swipel' >Swipe Left Test</a></li> <br>
+		<li class="swipe-x swipe-y"><a id='swiper' >Swipe Right Test</a></li> <br>
+		<li class="swipe-x swipe-y"><a id='swiped' >Swipe Down Test</a></li> <br>
+		<div style="height:500px; border:#f00 1px solid" id='swipetest'>Swipe Testsssssssssssssssssss</div> <br>
 
         <li class="swipe-reveal">
             <div class="swipe-content">Swipe to reveal options </div>
@@ -62,3 +66,14 @@ function showMoreSheet(){
         </li>
     </ul>
 </div>
+<script>
+/*
+ var _myScroller =  $("#hello").scroller({
+        verticalScroll : true,
+        horizontalScroll : false,
+        vScrollCSS: "afScrollbar",
+        autoEnable : true
+    });
+*/
+console.log($("#hello"));
+</script>
