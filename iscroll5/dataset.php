@@ -4,7 +4,7 @@
 header('Content-type: application/json');
 
 $start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
-$count = isset($_GET['count']) ? min((int)$_GET['count'], 7) : 7;
+$count = isset($_GET['count']) ? min((int)$_GET['count'], 8) : 8;
 
 $po = array(
 	

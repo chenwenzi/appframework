@@ -78,14 +78,14 @@ function loaded () {
 		//infiniteLimit: 2000,
 		dataset: requestData,
 		dataFiller: updateContent,
-		cacheSize: 7
+		cacheSize: 8
 	});
 }
 
 function requestData (start, count) {
 	ajax('dataset.php?start=' + +start + '&count=' + +count, {
 		callback: function (data) {
-			console.log(data);
+			//console.log(data);
 			data = JSON.parse(data);
 			myScroll.updateCache(start, data);
 		}
